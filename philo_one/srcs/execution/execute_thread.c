@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/03 18:59:43 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/04 11:41:52 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,14 @@ t_philo		*philo_state(t_philo *p, PHILO_STATE state)
 	return (p);
 }
 
+void		take_forks(t_philo *p)
+{
+	pthread_mutex_lock(&p->args->forks[(p->lr_forks[RIGHT_FORK])]);
+	alert(current_time(*p->args), philo_state(p, FORKING));
+	pthread_mutex_lock(&p->args->forks[(p->lr_forks[LEFT_FORK])]);
+	alert(current_time(*p->args), philo_state(p, FORKING));
+}
+
 void		*start_routine(void *arg)
 {
 	t_philo	*p;
@@ -27,10 +35,9 @@ void		*start_routine(void *arg)
 	p = (t_philo *)arg;
 	while (1)
 	{
-		pthread_mutex_lock(&p->args->forks[(p->lr_forks[RIGHT_FORK])]);
-		alert(current_time(*p->args), philo_state(p, FORKING));
-		pthread_mutex_lock(&p->args->forks[(p->lr_forks[LEFT_FORK])]);
-		alert(current_time(*p->args), philo_state(p, FORKING));
+		pthread_mutex_lock(&p->args->picking);
+		take_forks(p);
+		pthread_mutex_unlock(&p->args->picking);
 		p->timeout = p->args->args[T_TO_DIE] + current_time(*(p->args));
 		alert(current_time(*p->args), philo_state(p, EATING));
 		pthread_mutex_lock(&p->eat);

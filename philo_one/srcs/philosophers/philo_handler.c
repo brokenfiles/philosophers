@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/03 18:59:43 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/04 13:28:40 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 int			init_struct(t_args *args)
 {
+	args->philo_dead = 0;
 	args->args[MAX_EAT_TOTAL] = args->args[N_PHILO] * args->args[PHILO_MAX_EAT];
 	gettimeofday(&args->t_start, NULL);
 	return (EXIT_SUCCESS);
@@ -61,6 +62,8 @@ int			init_mutex(t_args *args)
 	}
 	pthread_mutex_init(&args->fork_message, NULL);
 	pthread_mutex_unlock(&args->fork_message);
+	pthread_mutex_init(&args->picking, NULL);
+	pthread_mutex_unlock(&args->picking);
 	return (EXIT_SUCCESS);
 }
 

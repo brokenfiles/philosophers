@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/03 19:11:50 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/04 13:47:53 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,6 @@ int		die_message(t_philo *p, PHILO_STATE state)
 	return (FALSE);
 }
 
-int		philos_are_fed(t_args *args)
-{
-	int		index;
-	t_philo	philo;
-
-	index = 0;
-	while (index < args->args[N_PHILO])
-	{
-		philo = args->philos[index];
-		if (args->args[PHILO_MAX_EAT] > philo.eat_count)
-			return (FALSE);
-		index++;
-	}
-	return (TRUE);
-}
-
 int		philo_alive(t_args *args)
 {
 	int		index;
@@ -50,13 +34,17 @@ int		philo_alive(t_args *args)
 		if (args->n_args > 4 && args->total_philo_meal >= args->args[MAX_EAT_TOTAL])
 			return (die_message(&philo, FED));
 		if (philo.timeout < current_time(*args) && philo.state != EATING)
-			return (die_message(&philo, DIED));
+		{
+			die_message(&philo, DIED);
+			args->philo_dead = TRUE;
+			return (FALSE);
+		}
 		index++;
 	}
 	return (TRUE);
 }
 
-void start_mid_philo(t_args *args, int even)
+void	start_mid_philo(t_args *args, int even)
 {
 	int index;
 
@@ -73,7 +61,7 @@ void start_mid_philo(t_args *args, int even)
 	}
 }
 
-int start_philosophers(t_args *args)
+int		start_philosophers(t_args *args)
 {
 	start_mid_philo(args, 1);
 	usleep(500);

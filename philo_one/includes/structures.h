@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:40:41 by louis             #+#    #+#             */
-/*   Updated: 2020/09/03 19:11:50 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/04 11:15:39 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,11 @@ typedef struct	s_args {
 	int				n_args;
 	int				args[6];
 	int				total_philo_meal;
+	int				philo_dead;
 	t_philo			*philos;
 	struct timeval	t_start;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	fork_message;
+	pthread_mutex_t	picking;
 }				t_args;
 #endif
