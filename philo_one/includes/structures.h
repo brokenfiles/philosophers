@@ -6,14 +6,15 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:40:41 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:34:25 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:43:03 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCTURES_H
 # define STRUCTURES_H
 
-# include <zconf.h>
+# include <pthread.h>
+# include <sys/time.h>
 # define PHILO_STATE int
 # define LEFT_FORK 0
 # define RIGHT_FORK 1
