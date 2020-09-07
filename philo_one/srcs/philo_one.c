@@ -6,13 +6,12 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:36:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 13:11:41 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 15:26:56 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/structures.h"
 #include "../includes/declarations.h"
-#include "../libs/printf/includes/printf.h"
 
 int	main(int ac, char **av)
 {
