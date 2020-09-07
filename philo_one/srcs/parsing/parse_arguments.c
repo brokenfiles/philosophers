@@ -6,13 +6,13 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:04:48 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:21:29 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:21:56 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
 #include "../../includes/declarations.h"
-#include <libc.h>
+#include <stdlib.h>
 
 int	is_str_digit(const char *str)
 {
