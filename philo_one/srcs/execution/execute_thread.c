@@ -6,13 +6,13 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 15:22:31 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:21:29 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <structures.h>
+#include "../../includes/structures.h"
 #include <pthread.h>
-#include <declarations.h>
+#include "../../includes/declarations.h"
 
 t_philo		*philo_state(t_philo *p, PHILO_STATE state)
 {
@@ -45,10 +45,10 @@ void		*start_routine(void *arg)
 		pthread_mutex_unlock(&p->eat);
 		pthread_mutex_unlock(&p->args->forks[(p->lr_forks[RIGHT_FORK])]);
 		pthread_mutex_unlock(&p->args->forks[(p->lr_forks[LEFT_FORK])]);
-		if (p->args->n_args > 4 &&
-		++p->eat_count >= p->args->args[PHILO_MAX_EAT])
-			break ;
 		alert(current_time(*p->args), philo_state(p, SLEEPING));
+		if (p->args->n_args > 4 &&
+			++p->eat_count >= p->args->args[PHILO_MAX_EAT])
+			break ;
 		usleep(p->args->args[T_TO_SLEEP] * 1000);
 		alert(current_time(*p->args), philo_state(p, THINKING));
 	}

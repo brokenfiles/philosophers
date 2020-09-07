@@ -6,12 +6,12 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:04:48 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 15:25:35 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:21:29 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <structures.h>
-#include <declarations.h>
+#include "../../includes/structures.h"
+#include "../../includes/declarations.h"
 #include <libc.h>
 
 int	is_str_digit(const char *str)
@@ -31,9 +31,9 @@ int	is_str_digit(const char *str)
 int	check_arguments(t_args *args)
 {
 	if (args->args[N_PHILO] < 2)
-	{
 		return (EXIT_FAILURE);
-	}
+	if (args->n_args > 4 && args->args[PHILO_MAX_EAT] < 1)
+		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
 

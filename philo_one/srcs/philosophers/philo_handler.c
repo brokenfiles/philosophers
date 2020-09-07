@@ -6,18 +6,17 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 14:54:24 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:34:25 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <structures.h>
+#include "../../includes/structures.h"
 #include <stdlib.h>
 #include <sys/time.h>
 #include <pthread.h>
 
 int			init_struct(t_args *args)
 {
-	args->philo_dead = 0;
 	args->args[CURR_PHILO] = args->args[N_PHILO];
 	gettimeofday(&args->t_start, NULL);
 	return (EXIT_SUCCESS);

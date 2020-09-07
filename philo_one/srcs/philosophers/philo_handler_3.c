@@ -6,11 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 13:11:29 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:34:25 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <structures.h>
+#include "../../includes/structures.h"
 #include <pthread.h>
 #include <stdlib.h>
 

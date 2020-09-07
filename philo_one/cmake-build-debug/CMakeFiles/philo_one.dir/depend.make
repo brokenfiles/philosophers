@@ -7,9 +7,8 @@ CMakeFiles/philo_one.dir/srcs/execution/execute_thread.c.o: ../includes/declarat
 CMakeFiles/philo_one.dir/srcs/execution/execute_thread.c.o: ../includes/structures.h
 CMakeFiles/philo_one.dir/srcs/execution/execute_thread.c.o: ../srcs/execution/execute_thread.c
 
+CMakeFiles/philo_one.dir/srcs/messages/alert.c.o: ../includes/declarations.h
 CMakeFiles/philo_one.dir/srcs/messages/alert.c.o: ../includes/structures.h
-CMakeFiles/philo_one.dir/srcs/messages/alert.c.o: ../libs/printf/includes/libft.h
-CMakeFiles/philo_one.dir/srcs/messages/alert.c.o: ../libs/printf/includes/printf.h
 CMakeFiles/philo_one.dir/srcs/messages/alert.c.o: ../srcs/messages/alert.c
 
 CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o: ../includes/declarations.h
@@ -25,8 +24,6 @@ CMakeFiles/philo_one.dir/srcs/philo_one.c.o: ../libs/printf/includes/printf.h
 CMakeFiles/philo_one.dir/srcs/philo_one.c.o: ../srcs/philo_one.c
 
 CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o: ../includes/structures.h
-CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o: ../libs/printf/includes/libft.h
-CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o: ../libs/printf/includes/printf.h
 CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o: ../srcs/philosophers/philo_handler.c
 
 CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_2.c.o: ../includes/declarations.h

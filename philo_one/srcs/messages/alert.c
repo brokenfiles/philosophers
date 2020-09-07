@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/04 13:39:51 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:35:11 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 
 void	alert(long int t, t_philo *p)
 {
-	if (p->args->philo_dead)
-		return ;
 	pthread_mutex_lock(&p->args->fork_message);
 	ft_putnbr((int)t);
 	if (p->state != FED)

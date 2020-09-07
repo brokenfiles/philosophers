@@ -4,17 +4,16 @@
 CMakeFiles/philo_one.dir/srcs/errors/errors.c.o
  /Users/louis/42/philosophers/philo_one/srcs/errors/errors.c
 CMakeFiles/philo_one.dir/srcs/execution/execute_thread.c.o
- ../includes/declarations.h
- ../includes/structures.h
+ /Users/louis/42/philosophers/philo_one/includes/declarations.h
+ /Users/louis/42/philosophers/philo_one/includes/structures.h
  /Users/louis/42/philosophers/philo_one/srcs/execution/execute_thread.c
 CMakeFiles/philo_one.dir/srcs/messages/alert.c.o
- ../includes/structures.h
- /Users/louis/42/philosophers/philo_one/libs/printf/includes/libft.h
- /Users/louis/42/philosophers/philo_one/libs/printf/includes/printf.h
- /Users/louis/42/philosophers/philo_one/srcs/messages/alert.c
-CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o
  ../includes/declarations.h
  ../includes/structures.h
+ /Users/louis/42/philosophers/philo_one/srcs/messages/alert.c
+CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o
+ /Users/louis/42/philosophers/philo_one/includes/declarations.h
+ /Users/louis/42/philosophers/philo_one/includes/structures.h
  /Users/louis/42/philosophers/philo_one/srcs/parsing/parse_arguments.c
 CMakeFiles/philo_one.dir/srcs/parsing/utils.c.o
  /Users/louis/42/philosophers/philo_one/srcs/parsing/utils.c
@@ -25,14 +24,12 @@ CMakeFiles/philo_one.dir/srcs/philo_one.c.o
  /Users/louis/42/philosophers/philo_one/libs/printf/includes/printf.h
  /Users/louis/42/philosophers/philo_one/srcs/philo_one.c
 CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o
- ../includes/structures.h
- /Users/louis/42/philosophers/philo_one/libs/printf/includes/libft.h
- /Users/louis/42/philosophers/philo_one/libs/printf/includes/printf.h
+ /Users/louis/42/philosophers/philo_one/includes/structures.h
  /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler.c
 CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_2.c.o
- ../includes/declarations.h
- ../includes/structures.h
+ /Users/louis/42/philosophers/philo_one/includes/declarations.h
+ /Users/louis/42/philosophers/philo_one/includes/structures.h
  /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_2.c
 CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.o
- ../includes/structures.h
+ /Users/louis/42/philosophers/philo_one/includes/structures.h
  /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_3.c

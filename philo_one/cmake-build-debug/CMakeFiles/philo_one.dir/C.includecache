@@ -34,37 +34,31 @@ stdio.h
 libft.h
 /Users/louis/42/philosophers/philo_one/libs/printf/includes/libft.h
 
-/Users/louis/42/philosophers/philo_one/srcs/errors/errors.c
-libc.h
--
-
 /Users/louis/42/philosophers/philo_one/srcs/execution/execute_thread.c
-structures.h
--
+../../includes/structures.h
+/Users/louis/42/philosophers/philo_one/includes/structures.h
 pthread.h
 -
-declarations.h
--
+../../includes/declarations.h
+/Users/louis/42/philosophers/philo_one/includes/declarations.h
 
 /Users/louis/42/philosophers/philo_one/srcs/messages/alert.c
 structures.h
--
+/Users/louis/42/philosophers/philo_one/srcs/messages/structures.h
+declarations.h
+/Users/louis/42/philosophers/philo_one/srcs/messages/declarations.h
 pthread.h
 -
-../../libs/printf/includes/printf.h
-/Users/louis/42/philosophers/philo_one/libs/printf/includes/printf.h
 
 /Users/louis/42/philosophers/philo_one/srcs/parsing/parse_arguments.c
-structures.h
--
-declarations.h
--
+../../includes/structures.h
+/Users/louis/42/philosophers/philo_one/includes/structures.h
+../../includes/declarations.h
+/Users/louis/42/philosophers/philo_one/includes/declarations.h
 libc.h
 -
 
 /Users/louis/42/philosophers/philo_one/srcs/philo_one.c
-libc.h
--
 ../includes/structures.h
 /Users/louis/42/philosophers/philo_one/includes/structures.h
 ../includes/declarations.h
@@ -73,30 +67,28 @@ libc.h
 /Users/louis/42/philosophers/philo_one/libs/printf/includes/printf.h
 
 /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler.c
-structures.h
--
+../../includes/structures.h
+/Users/louis/42/philosophers/philo_one/includes/structures.h
 stdlib.h
 -
 sys/time.h
 -
 pthread.h
 -
-../../libs/printf/includes/printf.h
-/Users/louis/42/philosophers/philo_one/libs/printf/includes/printf.h
 
 /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_2.c
-structures.h
--
+../../includes/structures.h
+/Users/louis/42/philosophers/philo_one/includes/structures.h
 stdlib.h
 -
 pthread.h
 -
-declarations.h
--
+../../includes/declarations.h
+/Users/louis/42/philosophers/philo_one/includes/declarations.h
 
 /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_3.c
-structures.h
--
+../../includes/structures.h
+/Users/louis/42/philosophers/philo_one/includes/structures.h
 pthread.h
 -
 stdlib.h
