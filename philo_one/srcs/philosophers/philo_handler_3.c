@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:41:50 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:46:04 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	clear_philo(t_args *args)
 	{
 		pthread_mutex_destroy(&args->forks[index]);
 		pthread_mutex_destroy(&args->philos[index].eat);
-		pthread_kill(args->philos[index].pthread, EXIT_SUCCESS);
 		index++;
 	}
 	pthread_mutex_destroy(&args->fork_message);
