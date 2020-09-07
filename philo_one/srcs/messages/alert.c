@@ -6,13 +6,13 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/04 11:40:06 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/04 13:39:51 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <structures.h>
+#include "structures.h"
+#include "declarations.h"
 #include <pthread.h>
-#include "../../libs/printf/includes/printf.h"
 
 void	alert(long int t, t_philo *p)
 {

@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:04:48 by louis             #+#    #+#             */
-/*   Updated: 2020/08/30 17:21:16 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 15:25:35 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	is_str_digit(const char *str)
 	int	index;
 
 	index = 0;
-	while (str[index]) {
+	while (str[index])
+	{
 		if (!ft_isdigit(str[index]))
 			return (0);
 		index++;
@@ -29,7 +30,8 @@ int	is_str_digit(const char *str)
 
 int	check_arguments(t_args *args)
 {
-	if (args->args[N_PHILO] < 2) {
+	if (args->args[N_PHILO] < 2)
+	{
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);

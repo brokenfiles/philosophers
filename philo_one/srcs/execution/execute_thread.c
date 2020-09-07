@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/04 11:41:52 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 15:22:31 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,17 @@ void		*start_routine(void *arg)
 		alert(current_time(*p->args), philo_state(p, EATING));
 		pthread_mutex_lock(&p->eat);
 		usleep(p->args->args[T_TO_EAT] * 1000);
-		p->eat_count++;
-		p->args->total_philo_meal++;
 		pthread_mutex_unlock(&p->eat);
 		pthread_mutex_unlock(&p->args->forks[(p->lr_forks[RIGHT_FORK])]);
 		pthread_mutex_unlock(&p->args->forks[(p->lr_forks[LEFT_FORK])]);
+		if (p->args->n_args > 4 &&
+		++p->eat_count >= p->args->args[PHILO_MAX_EAT])
+			break ;
 		alert(current_time(*p->args), philo_state(p, SLEEPING));
 		usleep(p->args->args[T_TO_SLEEP] * 1000);
 		alert(current_time(*p->args), philo_state(p, THINKING));
 	}
+	p->args->args[CURR_PHILO]--;
+	p->fed = 1;
 	return (NULL);
 }

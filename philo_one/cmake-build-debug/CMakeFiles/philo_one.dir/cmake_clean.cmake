@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/philo_one.dir/srcs/philo_one.c.o"
   "CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o"
   "CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_2.c.o"
+  "CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.o"
   "philo_one"
   "philo_one.pdb"
 )

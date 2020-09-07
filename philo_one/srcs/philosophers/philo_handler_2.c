@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/04 13:47:53 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 15:21:13 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ int		philo_alive(t_args *args)
 	while (index < args->args[N_PHILO])
 	{
 		philo = args->philos[index];
-		if (args->n_args > 4 && args->total_philo_meal >= args->args[MAX_EAT_TOTAL])
+		if (args->n_args > 4 && args->args[CURR_PHILO] == 0)
 			return (die_message(&philo, FED));
-		if (philo.timeout < current_time(*args) && philo.state != EATING)
+		if (!philo.fed && philo.state != EATING &&
+		philo.timeout < current_time(*args))
 		{
 			die_message(&philo, DIED);
 			args->philo_dead = TRUE;
@@ -46,7 +47,7 @@ int		philo_alive(t_args *args)
 
 void	start_mid_philo(t_args *args, int even)
 {
-	int index;
+	int	index;
 
 	index = 0;
 	while (index < args->args[N_PHILO])
@@ -54,7 +55,7 @@ void	start_mid_philo(t_args *args, int even)
 		if (index % 2 == !even)
 		{
 			pthread_create(&args->philos[index].pthread, NULL,
-					start_routine, (void *) &(args->philos[index]));
+					start_routine, &(args->philos[index]));
 			pthread_detach(args->philos[index].pthread);
 		}
 		index++;
@@ -66,6 +67,7 @@ int		start_philosophers(t_args *args)
 	start_mid_philo(args, 1);
 	usleep(500);
 	start_mid_philo(args, 0);
-	while (philo_alive(args));
+	while (philo_alive(args))
+		;
 	return (EXIT_SUCCESS);
 }

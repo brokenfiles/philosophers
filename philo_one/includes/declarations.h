@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:01:36 by louis             #+#    #+#             */
-/*   Updated: 2020/09/03 18:03:26 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 15:24:26 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ int			start_philosophers(t_args *args);
 void		*start_routine(void *arg);
 long int	current_time(t_args args);
 void		alert(long int t, t_philo *p);
+int			clear_philo(t_args *args);
+int			ft_free_error(const char *error_str, void *mem);
+void		ft_putnbr(int nb);
 #endif

@@ -33,3 +33,6 @@ CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_2.c.o
  ../includes/declarations.h
  ../includes/structures.h
  /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_2.c
+CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.o
+ ../includes/structures.h
+ /Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_3.c

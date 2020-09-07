@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:40:41 by louis             #+#    #+#             */
-/*   Updated: 2020/09/04 11:15:39 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 15:19:06 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define T_TO_EAT 2
 # define T_TO_SLEEP 3
 # define PHILO_MAX_EAT 4
-# define MAX_EAT_TOTAL 5
+# define CURR_PHILO 5
 # define EATING 0
 # define SLEEPING 1
 # define THINKING 2
@@ -37,6 +37,7 @@ typedef struct	s_philo {
 	int				id;
 	int				state;
 	int				eat_count;
+	int				fed;
 	long int		timeout;
 	pthread_t		pthread;
 	struct s_args	*args;
@@ -46,7 +47,6 @@ typedef struct	s_philo {
 typedef struct	s_args {
 	int				n_args;
 	int				args[6];
-	int				total_philo_meal;
 	int				philo_dead;
 	t_philo			*philos;
 	struct timeval	t_start;

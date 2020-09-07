@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errors.c                                           :+:      :+:    :+:   */
+/*   philo_handler_3.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/27 15:58:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 15:21:53 by louis            ###   ########.fr       */
+/*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
+/*   Updated: 2020/09/07 13:11:29 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libc.h>
+#include <structures.h>
+#include <pthread.h>
+#include <stdlib.h>
 
-int	ft_error(const char *error_str)
+int	clear_philo(t_args *args)
 {
 	int	index;
 
 	index = 0;
-	while (error_str[index])
+	while (index < args->args[N_PHILO])
 	{
-		write(2, &error_str[index], 1);
+		pthread_mutex_destroy(&args->forks[index]);
+		pthread_mutex_destroy(&args->philos[index].eat);
+		pthread_kill(args->philos[index].pthread, EXIT_SUCCESS);
 		index++;
 	}
-	return (1);
-}
-
-int	ft_free_error(const char *error_str, void *mem)
-{
-	ft_error(error_str);
-	free(mem);
-	return (1);
+	pthread_mutex_destroy(&args->fork_message);
+	pthread_mutex_destroy(&args->picking);
+	free(args->forks);
+	free(args);
+	return (EXIT_SUCCESS);
 }

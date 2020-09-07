@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/04 13:28:40 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 14:54:24 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 #include <stdlib.h>
 #include <sys/time.h>
 #include <pthread.h>
-#include "../../libs/printf/includes/printf.h"
 
 int			init_struct(t_args *args)
 {
 	args->philo_dead = 0;
-	args->args[MAX_EAT_TOTAL] = args->args[N_PHILO] * args->args[PHILO_MAX_EAT];
+	args->args[CURR_PHILO] = args->args[N_PHILO];
 	gettimeofday(&args->t_start, NULL);
 	return (EXIT_SUCCESS);
 }
@@ -41,6 +40,7 @@ t_philo		init_philo(t_args *args, int id)
 	philo.lr_forks[RIGHT_FORK] = id;
 	philo.id = id;
 	philo.args = args;
+	philo.fed = 0;
 	philo.eat_count = 0;
 	philo.state = THINKING;
 	pthread_mutex_init(&philo.eat, NULL);

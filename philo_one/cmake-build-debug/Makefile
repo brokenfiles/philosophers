@@ -339,6 +339,33 @@ srcs/philosophers/philo_handler_2.c.s:
 	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_2.c.s
 .PHONY : srcs/philosophers/philo_handler_2.c.s
 
+srcs/philosophers/philo_handler_3.o: srcs/philosophers/philo_handler_3.c.o
+
+.PHONY : srcs/philosophers/philo_handler_3.o
+
+# target to build an object file
+srcs/philosophers/philo_handler_3.c.o:
+	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.o
+.PHONY : srcs/philosophers/philo_handler_3.c.o
+
+srcs/philosophers/philo_handler_3.i: srcs/philosophers/philo_handler_3.c.i
+
+.PHONY : srcs/philosophers/philo_handler_3.i
+
+# target to preprocess a source file
+srcs/philosophers/philo_handler_3.c.i:
+	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.i
+.PHONY : srcs/philosophers/philo_handler_3.c.i
+
+srcs/philosophers/philo_handler_3.s: srcs/philosophers/philo_handler_3.c.s
+
+.PHONY : srcs/philosophers/philo_handler_3.s
+
+# target to generate assembly for a file
+srcs/philosophers/philo_handler_3.c.s:
+	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.s
+.PHONY : srcs/philosophers/philo_handler_3.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -372,6 +399,9 @@ help:
 	@echo "... srcs/philosophers/philo_handler_2.o"
 	@echo "... srcs/philosophers/philo_handler_2.i"
 	@echo "... srcs/philosophers/philo_handler_2.s"
+	@echo "... srcs/philosophers/philo_handler_3.o"
+	@echo "... srcs/philosophers/philo_handler_3.i"
+	@echo "... srcs/philosophers/philo_handler_3.s"
 .PHONY : help
 
 

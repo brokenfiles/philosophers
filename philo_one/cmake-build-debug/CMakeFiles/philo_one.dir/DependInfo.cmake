@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/louis/42/philosophers/philo_one/srcs/philo_one.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/philo_one.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_2.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_2.c.o"
+  "/Users/louis/42/philosophers/philo_one/srcs/philosophers/philo_handler_3.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/philosophers/philo_handler_3.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

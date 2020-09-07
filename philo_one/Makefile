@@ -9,8 +9,11 @@ CFLAGS		= -I${HEADERS} -Wall -Wextra -Werror
 
 SRCSC		=	srcs/philo_one.c\
 				srcs/errors/errors.c\
+				srcs/messages/alert.c\
 				srcs/execution/execute_thread.c\
 				srcs/philosophers/philo_handler.c\
+				srcs/philosophers/philo_handler_2.c\
+				srcs/philosophers/philo_handler_3.c\
 				srcs/parsing/parse_arguments.c\
 				srcs/parsing/utils.c
 
