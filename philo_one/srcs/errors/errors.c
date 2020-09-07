@@ -6,12 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 15:58:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 15:22:10 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:41:50 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "../../includes/structures.h"
 
 int	ft_error(const char *error_str)
 {

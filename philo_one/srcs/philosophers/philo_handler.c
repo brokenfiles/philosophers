@@ -6,14 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:34:25 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:36:29 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
-#include <stdlib.h>
-#include <sys/time.h>
-#include <pthread.h>
 
 int			init_struct(t_args *args)
 {

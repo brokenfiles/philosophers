@@ -6,12 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:21:29 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:21:56 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
-#include <pthread.h>
 #include "../../includes/declarations.h"
 
 t_philo		*philo_state(t_philo *p, PHILO_STATE state)

@@ -6,13 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:35:11 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:35:36 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
-#include <stdlib.h>
-#include <pthread.h>
 #include "../../includes/declarations.h"
 
 int		die_message(t_philo *p, PHILO_STATE state)
