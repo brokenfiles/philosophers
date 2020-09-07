@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:40:41 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:43:03 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:43:26 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define STRUCTURES_H
 
 # include <pthread.h>
+# include <unistd.h>
 # include <sys/time.h>
 # define PHILO_STATE int
 # define LEFT_FORK 0
