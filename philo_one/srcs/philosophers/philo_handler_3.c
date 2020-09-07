@@ -6,13 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:36:29 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 16:41:50 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
-#include <pthread.h>
-#include <stdlib.h>
 
 int	clear_philo(t_args *args)
 {
