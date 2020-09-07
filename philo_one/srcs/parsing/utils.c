@@ -6,11 +6,11 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:06:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/03 18:02:21 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 20:24:08 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../includes/structures.h"
 
 int		ft_isdigit(int c)
 {
@@ -82,4 +82,20 @@ int		ft_atoi(const char *str)
 	else if (result > 9223372036854775808UL && sign == -1)
 		return (0);
 	return ((int)(result * sign));
+}
+
+void	ft_usleep(long n)
+{
+	struct timeval	start;
+	struct timeval	current;
+
+	gettimeofday(&start, NULL);
+	while (1)
+	{
+		usleep(50);
+		gettimeofday(&current, NULL);
+		if ((current.tv_sec - start.tv_sec) * 1000000 +
+		(current.tv_usec - start.tv_usec) > n)
+			break;
+	}
 }

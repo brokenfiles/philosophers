@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:35:36 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 19:01:22 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	start_mid_philo(t_args *args, int even)
 			pthread_create(&args->philos[index].pthread, NULL,
 					start_routine, &(args->philos[index]));
 			pthread_detach(args->philos[index].pthread);
-			usleep(200);
+			ft_usleep(200);
 		}
 		index++;
 	}
@@ -64,7 +64,7 @@ void	start_mid_philo(t_args *args, int even)
 int		start_philosophers(t_args *args)
 {
 	start_mid_philo(args, 1);
-	usleep(500);
+	ft_usleep(5000);
 	start_mid_philo(args, 0);
 	while (philo_alive(args))
 		;
