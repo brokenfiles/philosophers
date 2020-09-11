@@ -204,6 +204,33 @@ srcs/messages/alert.c.s:
 	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/messages/alert.c.s
 .PHONY : srcs/messages/alert.c.s
 
+srcs/messages/alert_2.o: srcs/messages/alert_2.c.o
+
+.PHONY : srcs/messages/alert_2.o
+
+# target to build an object file
+srcs/messages/alert_2.c.o:
+	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/messages/alert_2.c.o
+.PHONY : srcs/messages/alert_2.c.o
+
+srcs/messages/alert_2.i: srcs/messages/alert_2.c.i
+
+.PHONY : srcs/messages/alert_2.i
+
+# target to preprocess a source file
+srcs/messages/alert_2.c.i:
+	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/messages/alert_2.c.i
+.PHONY : srcs/messages/alert_2.c.i
+
+srcs/messages/alert_2.s: srcs/messages/alert_2.c.s
+
+.PHONY : srcs/messages/alert_2.s
+
+# target to generate assembly for a file
+srcs/messages/alert_2.c.s:
+	$(MAKE) -f CMakeFiles/philo_one.dir/build.make CMakeFiles/philo_one.dir/srcs/messages/alert_2.c.s
+.PHONY : srcs/messages/alert_2.c.s
+
 srcs/parsing/parse_arguments.o: srcs/parsing/parse_arguments.c.o
 
 .PHONY : srcs/parsing/parse_arguments.o
@@ -384,6 +411,9 @@ help:
 	@echo "... srcs/messages/alert.o"
 	@echo "... srcs/messages/alert.i"
 	@echo "... srcs/messages/alert.s"
+	@echo "... srcs/messages/alert_2.o"
+	@echo "... srcs/messages/alert_2.i"
+	@echo "... srcs/messages/alert_2.s"
 	@echo "... srcs/parsing/parse_arguments.o"
 	@echo "... srcs/parsing/parse_arguments.i"
 	@echo "... srcs/parsing/parse_arguments.s"

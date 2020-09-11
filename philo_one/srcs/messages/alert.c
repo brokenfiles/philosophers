@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:35:36 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/11 18:00:51 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,17 @@ void	alert(long int t, t_philo *p)
 		ft_putstr(" philo #");
 		ft_putnbr(p->id);
 	}
-	ft_putstr(" ");
-	if (p->state == EATING)
-		ft_putstr("is eating");
+	if (p->state == EATING || p->state == SLEEPING)
+		ft_putstr(" is eating\n");
 	else if (p->state == SLEEPING)
-		ft_putstr("is sleeping");
+		ft_putstr(" is sleeping\n");
 	else if (p->state == FORKING)
-		ft_putstr("has taken a fork");
+		ft_putstr(" has taken a fork\n");
 	else if (p->state == THINKING)
-		ft_putstr("is thinking");
+		ft_putstr(" is thinking\n");
 	else if (p->state == DIED)
-		ft_putstr("died");
+		ft_putstr(" died\n");
 	else if (p->state == FED)
-		ft_putstr("everyone is fed");
-	ft_putstr("\n");
+		ft_putstr(" everyone is fed\n");
 	pthread_mutex_unlock(&p->args->fork_message);
 }

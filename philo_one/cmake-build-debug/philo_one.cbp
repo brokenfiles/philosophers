@@ -83,9 +83,6 @@
 		<Unit filename="/Users/louis/42/philosophers/philo_one/includes/declarations.h">
 			<Option target="philo_one"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_one/includes/error_codes.hpp">
-			<Option target="philo_one"/>
-		</Unit>
 		<Unit filename="/Users/louis/42/philosophers/philo_one/includes/structures.h">
 			<Option target="philo_one"/>
 		</Unit>
@@ -96,6 +93,9 @@
 			<Option target="philo_one"/>
 		</Unit>
 		<Unit filename="/Users/louis/42/philosophers/philo_one/srcs/messages/alert.c">
+			<Option target="philo_one"/>
+		</Unit>
+		<Unit filename="/Users/louis/42/philosophers/philo_one/srcs/messages/alert_2.c">
 			<Option target="philo_one"/>
 		</Unit>
 		<Unit filename="/Users/louis/42/philosophers/philo_one/srcs/parsing/parse_arguments.c">

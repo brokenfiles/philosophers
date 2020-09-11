@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/philo_one.dir/srcs/errors/errors.c.o"
   "CMakeFiles/philo_one.dir/srcs/execution/execute_thread.c.o"
   "CMakeFiles/philo_one.dir/srcs/messages/alert.c.o"
+  "CMakeFiles/philo_one.dir/srcs/messages/alert_2.c.o"
   "CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o"
   "CMakeFiles/philo_one.dir/srcs/parsing/utils.c.o"
   "CMakeFiles/philo_one.dir/srcs/philo_one.c.o"

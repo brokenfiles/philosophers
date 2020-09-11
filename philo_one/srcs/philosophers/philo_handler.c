@@ -6,11 +6,14 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 16:36:29 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/11 18:07:22 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
+#include "../../includes/declarations.h"
+
+#include <printf.h>
 
 int			init_struct(t_args *args)
 {
@@ -32,8 +35,9 @@ t_philo		init_philo(t_args *args, int id)
 {
 	t_philo philo;
 
-	philo.lr_forks[LEFT_FORK] = (id + 1 == args->args[N_PHILO]) ? 0 : (id + 1);
-	philo.lr_forks[RIGHT_FORK] = id;
+	philo.lr_forks[LEFT_FORK] = &args->forks[(id + 1 == args->args[N_PHILO])
+											? 0 : (id + 1)];
+	philo.lr_forks[RIGHT_FORK] = &args->forks[id];
 	philo.id = id;
 	philo.args = args;
 	philo.fed = 0;
@@ -52,14 +56,13 @@ int			init_mutex(t_args *args)
 	index = 0;
 	while (index < args->args[N_PHILO])
 	{
-		pthread_mutex_init(&args->forks[index], NULL);
-		pthread_mutex_unlock(&args->forks[index]);
+		pthread_mutex_init(&args->forks[index].mutex, NULL);
+		args->forks[index].id_last_philo = -1;
+		pthread_mutex_unlock(&args->forks[index].mutex);
 		index++;
 	}
 	pthread_mutex_init(&args->fork_message, NULL);
 	pthread_mutex_unlock(&args->fork_message);
-	pthread_mutex_init(&args->picking, NULL);
-	pthread_mutex_unlock(&args->picking);
 	return (EXIT_SUCCESS);
 }
 
@@ -67,7 +70,7 @@ int			init_philosophers(t_args *args, int n)
 {
 	if (!(args->philos = (t_philo *)malloc(sizeof(t_philo) * n)))
 		return (EXIT_FAILURE);
-	if (!(args->forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * n)))
+	if (!(args->forks = (t_fork *)malloc(sizeof(t_fork) * n)))
 		return (EXIT_FAILURE);
 	while (n-- > 0)
 		args->philos[n] = init_philo(args, n);

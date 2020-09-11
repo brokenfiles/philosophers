@@ -6,11 +6,12 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:06:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 20:44:54 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/07 20:52:07 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
+#include "../../includes/declarations.h"
 
 int		ft_isdigit(int c)
 {
@@ -21,11 +22,7 @@ int		ft_isdigit(int c)
 
 void	ft_putstr(const char *str)
 {
-	while (*str)
-	{
-		write(1, &(*str), 1);
-		str++;
-	}
+	write(1, str, ft_strlen(str));
 }
 
 void	ft_putchar(char c)

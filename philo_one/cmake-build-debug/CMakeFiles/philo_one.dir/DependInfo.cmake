@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/louis/42/philosophers/philo_one/srcs/errors/errors.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/errors/errors.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/execution/execute_thread.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/execution/execute_thread.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/messages/alert.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/messages/alert.c.o"
+  "/Users/louis/42/philosophers/philo_one/srcs/messages/alert_2.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/messages/alert_2.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/parsing/parse_arguments.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/parsing/utils.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/parsing/utils.c.o"
   "/Users/louis/42/philosophers/philo_one/srcs/philo_one.c" "/Users/louis/42/philosophers/philo_one/cmake-build-debug/CMakeFiles/philo_one.dir/srcs/philo_one.c.o"

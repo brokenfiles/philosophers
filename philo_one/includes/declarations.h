@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:01:36 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 20:15:51 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/11 17:23:02 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ int			clear_philo(t_args *args);
 int			ft_free_error(const char *error_str, void *mem);
 void		ft_putnbr(int nb);
 void		ft_usleep(long n);
+size_t		ft_strlen(const char *s);
+
 #endif
