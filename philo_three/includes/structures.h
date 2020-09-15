@@ -44,6 +44,7 @@
 struct s_args;
 typedef struct	s_philo {
 	int				id;
+	pid_t			pid;
 	int				state;
 	int				eat_count;
 	int				fed;

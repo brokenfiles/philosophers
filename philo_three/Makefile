@@ -1,5 +1,5 @@
 
-NAME		= philo_two
+NAME		= philo_three
 CC			= clang
 RM			= rm -f
 OBJS_DIR	= ./objects/
@@ -7,7 +7,7 @@ HEADERS		= ./includes/
 START		= 1
 CFLAGS		= -I${HEADERS} -Wall -Wextra -Werror -Wno-deprecated
 
-SRCSC		=	srcs/philo_two.c\
+SRCSC		=	srcs/philo_three.c\
 				srcs/errors/errors.c\
 				srcs/messages/alert.c\
 				srcs/execution/execute_thread.c\

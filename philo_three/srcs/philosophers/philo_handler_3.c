@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
-/*   Updated: 2020/09/15 12:38:20 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/15 12:37:21 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 int		clear_philo(t_args *args)
 {
-	sem_close(args->forks);
-	sem_close(args->messages);
-	sem_close(args->picking);
 	free(args);
 	return (EXIT_SUCCESS);
 }
