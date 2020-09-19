@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/19 18:15:26 by llaurent         ###   ########.fr       */
+/*   Updated: 2020/09/19 19:18:42 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*philo_alive(void *mem)
 
 void	start_mid_philo(t_args *args, int even)
 {
-	t_philo	p;
+	t_philo	*p;
 	int		index;
 
 	index = 0;
@@ -46,19 +46,17 @@ void	start_mid_philo(t_args *args, int even)
 	{
 		if (index % 2 == !even)
 		{
-			p = args->philos[index];
-			p.pid = fork();
-			if (p.pid == 0)
+			p = &args->philos[index];
+			p->pid = fork();
+			if (p->pid == 0)
 			{
 				args->forks = sem_open("/forks", O_RDWR);
 				args->messages = sem_open("/messages", O_RDWR);
 				args->picking = sem_open("/picking", O_RDWR);
-				pthread_create(&p.pthread, NULL, philo_alive, &p);
-				pthread_detach(p.pthread);
-				start_routine(&p);
-				ft_usleep(200);
+				pthread_create(&p->pthread, NULL, philo_alive, (void *)p);
+				pthread_detach(p->pthread);
+				start_routine(p);
 			}
-//			printf("pid #%d = %d, index = %d\n", p.id, p.pid, index);
 		}
 		index++;
 	}
