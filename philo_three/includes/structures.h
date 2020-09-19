@@ -24,8 +24,6 @@
 #include <printf.h>
 
 # define PHILO_STATE int
-# define LEFT_FORK 0
-# define RIGHT_FORK 1
 # define N_PHILO 0
 # define T_TO_DIE 1
 # define T_TO_EAT 2

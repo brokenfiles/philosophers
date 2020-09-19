@@ -18,6 +18,7 @@
 # include <signal.h>
 # include <unistd.h>
 # include <sys/time.h>
+# include <printf.h>
 # define PHILO_STATE int
 # define LEFT_FORK 0
 # define RIGHT_FORK 1

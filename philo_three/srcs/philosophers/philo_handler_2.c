@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/16 23:40:02 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/19 18:15:26 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,38 +28,37 @@ void	*philo_alive(void *mem)
 	while (TRUE)
 	{
 		if (p->args->n_args > 4 && p->eat_count >= p->args->args[PHILO_MAX_EAT])
-		{
-			die_message(p, FED);
-			exit(EXIT_SUCCESS);
-		}
+			exit(die_message(p, FED));
 		if (!p->fed && p->state != EATING
 			&& p->timeout < current_time(*p->args))
-		{
-			die_message(p, DIED);
-			exit(EXIT_SUCCESS);
-		}
+			exit(die_message(p, DIED));
 		ft_usleep(30);
 	}
 }
 
 void	start_mid_philo(t_args *args, int even)
 {
-	int	index;
+	t_philo	p;
+	int		index;
 
 	index = 0;
 	while (index < args->args[N_PHILO])
 	{
 		if (index % 2 == !even)
 		{
-			args->philos[index].pid = fork();
-			if (args->philos[index].pid == 0)
+			p = args->philos[index];
+			p.pid = fork();
+			if (p.pid == 0)
 			{
-				pthread_create(&args->philos[index].pthread, NULL,
-							   philo_alive, &args->philos[index]);
-				pthread_detach(args->philos[index].pthread);
-				start_routine(&args->philos[index]);
+				args->forks = sem_open("/forks", O_RDWR);
+				args->messages = sem_open("/messages", O_RDWR);
+				args->picking = sem_open("/picking", O_RDWR);
+				pthread_create(&p.pthread, NULL, philo_alive, &p);
+				pthread_detach(p.pthread);
+				start_routine(&p);
 				ft_usleep(200);
 			}
+//			printf("pid #%d = %d, index = %d\n", p.id, p.pid, index);
 		}
 		index++;
 	}

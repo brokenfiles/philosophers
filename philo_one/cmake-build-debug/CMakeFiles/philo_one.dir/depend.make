@@ -20,6 +20,7 @@ CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o: ../includes/declarati
 CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o: ../includes/structures.h
 CMakeFiles/philo_one.dir/srcs/parsing/parse_arguments.c.o: ../srcs/parsing/parse_arguments.c
 
+CMakeFiles/philo_one.dir/srcs/parsing/utils.c.o: ../includes/declarations.h
 CMakeFiles/philo_one.dir/srcs/parsing/utils.c.o: ../includes/structures.h
 CMakeFiles/philo_one.dir/srcs/parsing/utils.c.o: ../srcs/parsing/utils.c
 

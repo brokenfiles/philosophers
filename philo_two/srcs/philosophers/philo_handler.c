@@ -60,10 +60,10 @@ int			init_philosophers(t_args *args, int n)
 {
 	if (!(args->philos = (t_philo *)malloc(sizeof(t_philo) * n)))
 		return (EXIT_FAILURE);
-	while (n-- > 0)
-		args->philos[n] = init_philo(args, n);
 	if (init_struct(args) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
+	while (n-- > 0)
+		args->philos[n] = init_philo(args, n);
 	if (init_sem(args) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);

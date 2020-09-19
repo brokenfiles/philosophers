@@ -6,14 +6,12 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/11 18:07:22 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/19 15:36:25 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
 #include "../../includes/declarations.h"
-
-#include <printf.h>
 
 int			init_struct(t_args *args)
 {
@@ -72,10 +70,10 @@ int			init_philosophers(t_args *args, int n)
 		return (EXIT_FAILURE);
 	if (!(args->forks = (t_fork *)malloc(sizeof(t_fork) * n)))
 		return (EXIT_FAILURE);
-	while (n-- > 0)
-		args->philos[n] = init_philo(args, n);
 	if (init_struct(args) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
+	while (n-- > 0)
+		args->philos[n] = init_philo(args, n);
 	if (init_mutex(args) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
