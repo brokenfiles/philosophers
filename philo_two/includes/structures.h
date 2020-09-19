@@ -19,9 +19,12 @@
 # include <unistd.h>
 # include <sys/time.h>
 # include <semaphore.h>
-
-// TODO: REMOVE THIS
-#include <printf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdio.h>
 
 # define PHILO_STATE int
 # define LEFT_FORK 0
