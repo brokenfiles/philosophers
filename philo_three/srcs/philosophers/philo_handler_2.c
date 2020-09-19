@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/15 14:30:33 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/16 23:40:02 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,26 @@ int		die_message(t_philo *p, PHILO_STATE state)
 	return (FALSE);
 }
 
-int		philo_alive(t_args *args)
+void	*philo_alive(void *mem)
 {
-	int		index;
-	t_philo	philo;
+	t_philo	*p;
 
-	index = 0;
-	while (index < args->args[N_PHILO])
+	p = (t_philo *)mem;
+	while (TRUE)
 	{
-		philo = args->philos[index];
-		if (args->n_args > 4 && args->args[CURR_PHILO] == 0)
-			return (die_message(&philo, FED));
-		if (!philo.fed && philo.state != EATING
-			&& philo.timeout < current_time(*args))
-			return (die_message(&philo, DIED));
-		index++;
+		if (p->args->n_args > 4 && p->eat_count >= p->args->args[PHILO_MAX_EAT])
+		{
+			die_message(p, FED);
+			exit(EXIT_SUCCESS);
+		}
+		if (!p->fed && p->state != EATING
+			&& p->timeout < current_time(*p->args))
+		{
+			die_message(p, DIED);
+			exit(EXIT_SUCCESS);
+		}
+		ft_usleep(30);
 	}
-	return (TRUE);
 }
 
 void	start_mid_philo(t_args *args, int even)
@@ -48,10 +51,15 @@ void	start_mid_philo(t_args *args, int even)
 	{
 		if (index % 2 == !even)
 		{
-			pthread_create(&args->philos[index].pthread, NULL,
-					start_routine, &(args->philos[index]));
-			pthread_detach(args->philos[index].pthread);
-			ft_usleep(200);
+			args->philos[index].pid = fork();
+			if (args->philos[index].pid == 0)
+			{
+				pthread_create(&args->philos[index].pthread, NULL,
+							   philo_alive, &args->philos[index]);
+				pthread_detach(args->philos[index].pthread);
+				start_routine(&args->philos[index]);
+				ft_usleep(200);
+			}
 		}
 		index++;
 	}
@@ -62,7 +70,5 @@ int		start_philosophers(t_args *args)
 	start_mid_philo(args, 1);
 	ft_usleep(5000);
 	start_mid_philo(args, 0);
-	while (philo_alive(args))
-		;
 	return (EXIT_SUCCESS);
 }

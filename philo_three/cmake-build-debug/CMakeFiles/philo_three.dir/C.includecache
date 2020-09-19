@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/louis/42/philosophers/philo_three/includes/declarations.h
+
+/Users/louis/42/philosophers/philo_three/includes/structures.h
+pthread.h
+-
+stdlib.h
+-
+signal.h
+-
+unistd.h
+-
+sys/time.h
+-
+semaphore.h
+-
+printf.h
+-
+
+/Users/louis/42/philosophers/philo_three/srcs/philosophers/philo_handler_2.c
+../../includes/structures.h
+/Users/louis/42/philosophers/philo_three/includes/structures.h
+../../includes/declarations.h
+/Users/louis/42/philosophers/philo_three/includes/declarations.h
+

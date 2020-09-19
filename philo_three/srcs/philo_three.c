@@ -26,6 +26,8 @@ int	main(int ac, char **av)
 	if (init_philosophers(args, args->args[N_PHILO]) == EXIT_FAILURE)
 		return (ft_free_error("Cannot init philosophers.\n", args));
 	start_philosophers(args);
+	printf("end start_philo\n");
 	clear_philo(args);
+	printf("end clear_philo\n");
 	return (EXIT_SUCCESS);
 }

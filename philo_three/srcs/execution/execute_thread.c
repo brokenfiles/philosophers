@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/15 13:05:49 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/16 23:36:51 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ void		take_forks(t_philo *p)
 	alert(current_time(*p->args), philo_state(p, FORKING));
 }
 
-void		*start_routine(void *arg)
+void		*start_routine(t_philo *p)
 {
-	t_philo	*p;
-
-	p = (t_philo *)arg;
 	while (1)
 	{
 		sem_wait(p->args->picking);

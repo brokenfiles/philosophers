@@ -20,7 +20,7 @@ int			ft_isdigit(int c);
 int			init_philosophers(t_args *args, int n);
 void		ft_putstr(const char *str);
 int			start_philosophers(t_args *args);
-void		*start_routine(void *arg);
+void		*start_routine(t_philo *arg);
 long int	current_time(t_args args);
 void		alert(long int t, t_philo *p);
 int			clear_philo(t_args *args);
