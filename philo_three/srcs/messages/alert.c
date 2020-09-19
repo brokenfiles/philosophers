@@ -22,7 +22,7 @@ void	alert(long int t, t_philo *p)
 		ft_putstr(" philo #");
 		ft_putnbr(p->id);
 	}
-	if (p->state == EATING || p->state == SLEEPING)
+	if (p->state == EATING)
 		ft_putstr(" is eating\n");
 	else if (p->state == SLEEPING)
 		ft_putstr(" is sleeping\n");

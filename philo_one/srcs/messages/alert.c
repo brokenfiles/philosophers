@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/11 18:00:51 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/19 19:35:44 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	alert(long int t, t_philo *p)
 		ft_putstr(" philo #");
 		ft_putnbr(p->id);
 	}
-	if (p->state == EATING || p->state == SLEEPING)
+	if (p->state == EATING)
 		ft_putstr(" is eating\n");
 	else if (p->state == SLEEPING)
 		ft_putstr(" is sleeping\n");
