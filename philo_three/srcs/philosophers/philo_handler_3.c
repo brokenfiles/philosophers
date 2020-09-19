@@ -21,7 +21,10 @@ int		clear_philo(t_args *args)
 	index = 0;
 	waitpid(-1, &status, 0);
 	while (index < args->args[N_PHILO])
+	{
+		free(args->philos[index].eat);
 		kill(args->philos[index++].pid, SIGQUIT);
+	}
 	free(args);
 	return (EXIT_SUCCESS);
 }

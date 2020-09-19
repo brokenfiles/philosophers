@@ -37,6 +37,7 @@ t_philo		init_philo(t_args *args, int id)
 	philo.fed = 0;
 	philo.eat_count = 0;
 	philo.state = THINKING;
+	philo.eat = malloc(sizeof(sem_t));
 	sem_init(philo.eat, O_CREAT, 1);
 	philo.timeout = args->args[T_TO_DIE] + current_time(*args);
 	return (philo);
