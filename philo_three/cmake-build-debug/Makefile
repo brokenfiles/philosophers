@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/louis/42/philos/philo_three
+CMAKE_SOURCE_DIR = /Users/louis/42/philos/philo_two
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/louis/42/philos/philo_three/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/louis/42/philos/philo_two/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/louis/42/philos/philo_three/cmake-build-debug/CMakeFiles /Users/louis/42/philos/philo_three/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/louis/42/philos/philo_two/cmake-build-debug/CMakeFiles /Users/louis/42/philos/philo_two/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/louis/42/philos/philo_three/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/louis/42/philos/philo_two/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named philo_three
+# Target rules for targets named philo_two
 
 # Build rule for target.
-philo_three: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 philo_three
-.PHONY : philo_three
+philo_two: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 philo_two
+.PHONY : philo_two
 
 # fast build rule for target.
-philo_three/fast:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/build
-.PHONY : philo_three/fast
+philo_two/fast:
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/build
+.PHONY : philo_two/fast
 
 srcs/errors/errors.o: srcs/errors/errors.c.o
 
@@ -129,7 +129,7 @@ srcs/errors/errors.o: srcs/errors/errors.c.o
 
 # target to build an object file
 srcs/errors/errors.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/errors/errors.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/errors/errors.c.o
 .PHONY : srcs/errors/errors.c.o
 
 srcs/errors/errors.i: srcs/errors/errors.c.i
@@ -138,7 +138,7 @@ srcs/errors/errors.i: srcs/errors/errors.c.i
 
 # target to preprocess a source file
 srcs/errors/errors.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/errors/errors.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/errors/errors.c.i
 .PHONY : srcs/errors/errors.c.i
 
 srcs/errors/errors.s: srcs/errors/errors.c.s
@@ -147,7 +147,7 @@ srcs/errors/errors.s: srcs/errors/errors.c.s
 
 # target to generate assembly for a file
 srcs/errors/errors.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/errors/errors.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/errors/errors.c.s
 .PHONY : srcs/errors/errors.c.s
 
 srcs/execution/execute_thread.o: srcs/execution/execute_thread.c.o
@@ -156,7 +156,7 @@ srcs/execution/execute_thread.o: srcs/execution/execute_thread.c.o
 
 # target to build an object file
 srcs/execution/execute_thread.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/execution/execute_thread.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/execution/execute_thread.c.o
 .PHONY : srcs/execution/execute_thread.c.o
 
 srcs/execution/execute_thread.i: srcs/execution/execute_thread.c.i
@@ -165,7 +165,7 @@ srcs/execution/execute_thread.i: srcs/execution/execute_thread.c.i
 
 # target to preprocess a source file
 srcs/execution/execute_thread.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/execution/execute_thread.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/execution/execute_thread.c.i
 .PHONY : srcs/execution/execute_thread.c.i
 
 srcs/execution/execute_thread.s: srcs/execution/execute_thread.c.s
@@ -174,7 +174,7 @@ srcs/execution/execute_thread.s: srcs/execution/execute_thread.c.s
 
 # target to generate assembly for a file
 srcs/execution/execute_thread.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/execution/execute_thread.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/execution/execute_thread.c.s
 .PHONY : srcs/execution/execute_thread.c.s
 
 srcs/messages/alert.o: srcs/messages/alert.c.o
@@ -183,7 +183,7 @@ srcs/messages/alert.o: srcs/messages/alert.c.o
 
 # target to build an object file
 srcs/messages/alert.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/messages/alert.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/messages/alert.c.o
 .PHONY : srcs/messages/alert.c.o
 
 srcs/messages/alert.i: srcs/messages/alert.c.i
@@ -192,7 +192,7 @@ srcs/messages/alert.i: srcs/messages/alert.c.i
 
 # target to preprocess a source file
 srcs/messages/alert.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/messages/alert.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/messages/alert.c.i
 .PHONY : srcs/messages/alert.c.i
 
 srcs/messages/alert.s: srcs/messages/alert.c.s
@@ -201,7 +201,7 @@ srcs/messages/alert.s: srcs/messages/alert.c.s
 
 # target to generate assembly for a file
 srcs/messages/alert.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/messages/alert.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/messages/alert.c.s
 .PHONY : srcs/messages/alert.c.s
 
 srcs/parsing/parse_arguments.o: srcs/parsing/parse_arguments.c.o
@@ -210,7 +210,7 @@ srcs/parsing/parse_arguments.o: srcs/parsing/parse_arguments.c.o
 
 # target to build an object file
 srcs/parsing/parse_arguments.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/parsing/parse_arguments.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/parsing/parse_arguments.c.o
 .PHONY : srcs/parsing/parse_arguments.c.o
 
 srcs/parsing/parse_arguments.i: srcs/parsing/parse_arguments.c.i
@@ -219,7 +219,7 @@ srcs/parsing/parse_arguments.i: srcs/parsing/parse_arguments.c.i
 
 # target to preprocess a source file
 srcs/parsing/parse_arguments.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/parsing/parse_arguments.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/parsing/parse_arguments.c.i
 .PHONY : srcs/parsing/parse_arguments.c.i
 
 srcs/parsing/parse_arguments.s: srcs/parsing/parse_arguments.c.s
@@ -228,7 +228,7 @@ srcs/parsing/parse_arguments.s: srcs/parsing/parse_arguments.c.s
 
 # target to generate assembly for a file
 srcs/parsing/parse_arguments.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/parsing/parse_arguments.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/parsing/parse_arguments.c.s
 .PHONY : srcs/parsing/parse_arguments.c.s
 
 srcs/parsing/utils.o: srcs/parsing/utils.c.o
@@ -237,7 +237,7 @@ srcs/parsing/utils.o: srcs/parsing/utils.c.o
 
 # target to build an object file
 srcs/parsing/utils.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/parsing/utils.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/parsing/utils.c.o
 .PHONY : srcs/parsing/utils.c.o
 
 srcs/parsing/utils.i: srcs/parsing/utils.c.i
@@ -246,7 +246,7 @@ srcs/parsing/utils.i: srcs/parsing/utils.c.i
 
 # target to preprocess a source file
 srcs/parsing/utils.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/parsing/utils.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/parsing/utils.c.i
 .PHONY : srcs/parsing/utils.c.i
 
 srcs/parsing/utils.s: srcs/parsing/utils.c.s
@@ -255,35 +255,35 @@ srcs/parsing/utils.s: srcs/parsing/utils.c.s
 
 # target to generate assembly for a file
 srcs/parsing/utils.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/parsing/utils.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/parsing/utils.c.s
 .PHONY : srcs/parsing/utils.c.s
 
-srcs/philo_three.o: srcs/philo_three.c.o
+srcs/philo_two.o: srcs/philo_two.c.o
 
-.PHONY : srcs/philo_three.o
+.PHONY : srcs/philo_two.o
 
 # target to build an object file
-srcs/philo_three.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philo_three.c.o
-.PHONY : srcs/philo_three.c.o
+srcs/philo_two.c.o:
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philo_two.c.o
+.PHONY : srcs/philo_two.c.o
 
-srcs/philo_three.i: srcs/philo_three.c.i
+srcs/philo_two.i: srcs/philo_two.c.i
 
-.PHONY : srcs/philo_three.i
+.PHONY : srcs/philo_two.i
 
 # target to preprocess a source file
-srcs/philo_three.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philo_three.c.i
-.PHONY : srcs/philo_three.c.i
+srcs/philo_two.c.i:
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philo_two.c.i
+.PHONY : srcs/philo_two.c.i
 
-srcs/philo_three.s: srcs/philo_three.c.s
+srcs/philo_two.s: srcs/philo_two.c.s
 
-.PHONY : srcs/philo_three.s
+.PHONY : srcs/philo_two.s
 
 # target to generate assembly for a file
-srcs/philo_three.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philo_three.c.s
-.PHONY : srcs/philo_three.c.s
+srcs/philo_two.c.s:
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philo_two.c.s
+.PHONY : srcs/philo_two.c.s
 
 srcs/philosophers/philo_handler.o: srcs/philosophers/philo_handler.c.o
 
@@ -291,7 +291,7 @@ srcs/philosophers/philo_handler.o: srcs/philosophers/philo_handler.c.o
 
 # target to build an object file
 srcs/philosophers/philo_handler.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler.c.o
 .PHONY : srcs/philosophers/philo_handler.c.o
 
 srcs/philosophers/philo_handler.i: srcs/philosophers/philo_handler.c.i
@@ -300,7 +300,7 @@ srcs/philosophers/philo_handler.i: srcs/philosophers/philo_handler.c.i
 
 # target to preprocess a source file
 srcs/philosophers/philo_handler.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler.c.i
 .PHONY : srcs/philosophers/philo_handler.c.i
 
 srcs/philosophers/philo_handler.s: srcs/philosophers/philo_handler.c.s
@@ -309,7 +309,7 @@ srcs/philosophers/philo_handler.s: srcs/philosophers/philo_handler.c.s
 
 # target to generate assembly for a file
 srcs/philosophers/philo_handler.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler.c.s
 .PHONY : srcs/philosophers/philo_handler.c.s
 
 srcs/philosophers/philo_handler_2.o: srcs/philosophers/philo_handler_2.c.o
@@ -318,7 +318,7 @@ srcs/philosophers/philo_handler_2.o: srcs/philosophers/philo_handler_2.c.o
 
 # target to build an object file
 srcs/philosophers/philo_handler_2.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler_2.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler_2.c.o
 .PHONY : srcs/philosophers/philo_handler_2.c.o
 
 srcs/philosophers/philo_handler_2.i: srcs/philosophers/philo_handler_2.c.i
@@ -327,7 +327,7 @@ srcs/philosophers/philo_handler_2.i: srcs/philosophers/philo_handler_2.c.i
 
 # target to preprocess a source file
 srcs/philosophers/philo_handler_2.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler_2.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler_2.c.i
 .PHONY : srcs/philosophers/philo_handler_2.c.i
 
 srcs/philosophers/philo_handler_2.s: srcs/philosophers/philo_handler_2.c.s
@@ -336,7 +336,7 @@ srcs/philosophers/philo_handler_2.s: srcs/philosophers/philo_handler_2.c.s
 
 # target to generate assembly for a file
 srcs/philosophers/philo_handler_2.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler_2.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler_2.c.s
 .PHONY : srcs/philosophers/philo_handler_2.c.s
 
 srcs/philosophers/philo_handler_3.o: srcs/philosophers/philo_handler_3.c.o
@@ -345,7 +345,7 @@ srcs/philosophers/philo_handler_3.o: srcs/philosophers/philo_handler_3.c.o
 
 # target to build an object file
 srcs/philosophers/philo_handler_3.c.o:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler_3.c.o
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler_3.c.o
 .PHONY : srcs/philosophers/philo_handler_3.c.o
 
 srcs/philosophers/philo_handler_3.i: srcs/philosophers/philo_handler_3.c.i
@@ -354,7 +354,7 @@ srcs/philosophers/philo_handler_3.i: srcs/philosophers/philo_handler_3.c.i
 
 # target to preprocess a source file
 srcs/philosophers/philo_handler_3.c.i:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler_3.c.i
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler_3.c.i
 .PHONY : srcs/philosophers/philo_handler_3.c.i
 
 srcs/philosophers/philo_handler_3.s: srcs/philosophers/philo_handler_3.c.s
@@ -363,7 +363,7 @@ srcs/philosophers/philo_handler_3.s: srcs/philosophers/philo_handler_3.c.s
 
 # target to generate assembly for a file
 srcs/philosophers/philo_handler_3.c.s:
-	$(MAKE) -f CMakeFiles/philo_three.dir/build.make CMakeFiles/philo_three.dir/srcs/philosophers/philo_handler_3.c.s
+	$(MAKE) -f CMakeFiles/philo_two.dir/build.make CMakeFiles/philo_two.dir/srcs/philosophers/philo_handler_3.c.s
 .PHONY : srcs/philosophers/philo_handler_3.c.s
 
 # Help Target
@@ -374,7 +374,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... philo_three"
+	@echo "... philo_two"
 	@echo "... srcs/errors/errors.o"
 	@echo "... srcs/errors/errors.i"
 	@echo "... srcs/errors/errors.s"
@@ -390,9 +390,9 @@ help:
 	@echo "... srcs/parsing/utils.o"
 	@echo "... srcs/parsing/utils.i"
 	@echo "... srcs/parsing/utils.s"
-	@echo "... srcs/philo_three.o"
-	@echo "... srcs/philo_three.i"
-	@echo "... srcs/philo_three.s"
+	@echo "... srcs/philo_two.o"
+	@echo "... srcs/philo_two.i"
+	@echo "... srcs/philo_two.s"
 	@echo "... srcs/philosophers/philo_handler.o"
 	@echo "... srcs/philosophers/philo_handler.i"
 	@echo "... srcs/philosophers/philo_handler.s"

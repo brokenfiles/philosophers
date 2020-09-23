@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/19 16:40:17 by llaurent         ###   ########.fr       */
+/*   Updated: 2020/09/23 15:08:52 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ void		*start_routine(t_philo *p)
 		ft_usleep(p->args->args[T_TO_SLEEP] * 1000);
 		alert(current_time(*p->args), philo_state(p, THINKING));
 	}
-	p->args->args[CURR_PHILO]--;
 	p->fed = 1;
 	return (NULL);
 }

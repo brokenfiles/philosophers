@@ -6,16 +6,15 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/16 23:33:57 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/23 15:19:14 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
 #include "../../includes/declarations.h"
 
-void	alert(long int t, t_philo *p)
+void	print_line(long int t, t_philo *p)
 {
-	sem_wait(p->args->messages);
 	ft_putnbr((int)t);
 	if (p->state != FED)
 	{
@@ -33,7 +32,12 @@ void	alert(long int t, t_philo *p)
 	else if (p->state == DIED)
 		ft_putstr(" died\n");
 	else if (p->state == FED)
-		ft_putstr(" is fed\n");
-	if (p->state != DIED)
-		sem_post(p->args->messages);
+		ft_putstr(" everyone is fed\n");
+}
+
+void	alert(long int t, t_philo *p)
+{
+	sem_wait(p->args->messages);
+	print_line(t, p);
+	sem_post(p->args->messages);
 }

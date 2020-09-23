@@ -21,12 +21,12 @@ OBJS		= ${SRCSC:%.c=${OBJS_DIR}/%.o}
 
 ${OBJS_DIR}/%.o: %.c
 			@mkdir -p ${@D}
-			@printf "\033[2K\033[0;35mPHILO_ONE\033[0;0m:    \033[0;33mCompilation...    \033[0;31m%-15.15s\033[0;0m\r" $(notdir ${<})
+			@printf "\033[2K\033[0;35mPHILO_THREE\033[0;0m:    \033[0;33mCompilation...    \033[0;31m%-15.15s\033[0;0m\r" $(notdir ${<})
 			@${CC} -pthread ${CFLAGS} -c $< -o $@
 
 ${NAME}:	header ${OBJS}
-			@printf "\033[2K\033[0;35mPHILO_ONE\033[0;0m:    \033[0;32mCompleted         \033[0;31m----\033[0;0m          \r"
-			@printf "\n\033[0;0m⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤\n\033[0;35mPHILO_ONE\033[0;0m:    \033[0;32mReady             \033[0;31m----          \033[0;0m\n⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤\n"
+			@printf "\033[2K\033[0;35mPHILO_THREE\033[0;0m:    \033[0;32mCompleted         \033[0;31m----\033[0;0m          \r"
+			@printf "\n\033[0;0m⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤\n\033[0;35mPHILO_THREE\033[0;0m:    \033[0;32mReady             \033[0;31m----          \033[0;0m\n⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤⏤\n"
 			@${CC} -pthread ${CFLAGS} ${OBJS} -o ${NAME}
 
 run:		${NAME}

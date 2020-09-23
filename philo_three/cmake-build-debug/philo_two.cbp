@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/louis/42/philosophers/philo_two/cmake-build-debug"/>
+				<Option working_dir="/Users/louis/42/philos/philo_two/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/louis/42/philosophers/philo_two/cmake-build-debug"/>
+				<Option working_dir="/Users/louis/42/philos/philo_two/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/louis/42/philosophers/philo_two/cmake-build-debug"/>
+				<Option working_dir="/Users/louis/42/philos/philo_two/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_two">
-				<Option output="/Users/louis/42/philosophers/philo_two/cmake-build-debug/philo_two" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/louis/42/philosophers/philo_two/cmake-build-debug"/>
+				<Option output="/Users/louis/42/philos/philo_two/cmake-build-debug/philo_two" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/louis/42/philos/philo_two/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/louis/42/philosophers/philo_two/includes"/>
+					<Add directory="/Users/louis/42/philos/philo_two/includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -52,20 +52,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="philo_two/fast">
-				<Option output="/Users/louis/42/philosophers/philo_two/cmake-build-debug/philo_two" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/louis/42/philosophers/philo_two/cmake-build-debug"/>
+				<Option output="/Users/louis/42/philos/philo_two/cmake-build-debug/philo_two" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/louis/42/philos/philo_two/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/louis/42/philosophers/philo_two/includes"/>
+					<Add directory="/Users/louis/42/philos/philo_two/includes"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
@@ -73,47 +73,47 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philosophers/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 philo_two/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/louis/42/philos/philo_two/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/includes/declarations.h">
+		<Unit filename="/Users/louis/42/philos/philo_two/includes/declarations.h">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/includes/structures.h">
+		<Unit filename="/Users/louis/42/philos/philo_two/includes/structures.h">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/errors/errors.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/errors/errors.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/execution/execute_thread.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/execution/execute_thread.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/messages/alert.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/messages/alert.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/parsing/parse_arguments.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/parsing/parse_arguments.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/parsing/utils.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/parsing/utils.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/philo_two.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/philo_two.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/philosophers/philo_handler.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/philosophers/philo_handler.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/philosophers/philo_handler_2.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/philosophers/philo_handler_2.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/srcs/philosophers/philo_handler_3.c">
+		<Unit filename="/Users/louis/42/philos/philo_two/srcs/philosophers/philo_handler_3.c">
 			<Option target="philo_two"/>
 		</Unit>
-		<Unit filename="/Users/louis/42/philosophers/philo_two/CMakeLists.txt">
+		<Unit filename="/Users/louis/42/philos/philo_two/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

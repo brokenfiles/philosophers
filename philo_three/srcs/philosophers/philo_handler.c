@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/15 23:22:06 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/23 12:14:06 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ t_philo		init_philo(t_args *args, int id)
 	philo.fed = 0;
 	philo.eat_count = 0;
 	philo.state = THINKING;
-	philo.eat = malloc(sizeof(sem_t));
 	sem_init(philo.eat, O_CREAT, 1);
 	philo.timeout = args->args[T_TO_DIE] + current_time(*args);
 	return (philo);
