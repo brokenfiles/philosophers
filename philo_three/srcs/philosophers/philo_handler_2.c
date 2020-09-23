@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/23 15:25:09 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/23 20:42:06 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,21 @@ void	*philo_alive(void *mem)
 	while (p->state != DIED)
 	{
 		usleep(1000);
-		if (p->args->n_args > 4 && p->eat_count >= p->args->args[PHILO_MAX_EAT])
+//		if (p->args->n_args > 4 && p->eat_count >= p->args->args[PHILO_MAX_EAT])
+//		{
+//			die_message(p, FED);
+//			while (1)
+//				;
+//		}
+		if (!p->fed && p->timeout < current_time(*p->args))
 		{
-			die_message(p, FED);
-			while (1)
-				;
-		}
-		if (!p->fed && p->state != EATING
-			&& p->timeout < current_time(*p->args))
-		{
+			sem_wait(p->eat);
 			sem_wait(p->args->messages);
-			p->state = DIED;
-			print_line(current_time(*p->args), p);
+			print_line(current_time(*p->args), p, DIED);
+			exit(0);
 		}
 	}
-	exit(0);
+	return (NULL);
 }
 
 void	start_mid_philo(t_args *args, int even)
@@ -59,14 +59,12 @@ void	start_mid_philo(t_args *args, int even)
 			p->pid = fork();
 			if (p->pid == 0)
 			{
-				args->forks = sem_open("/forks", O_RDWR);
-				args->messages = sem_open("/messages", O_RDWR);
-				args->picking = sem_open("/picking", O_RDWR);
-				pthread_create(&p->pthread, NULL, philo_alive, (void *)p);
-				pthread_detach(p->pthread);
+				pthread_create(&p->pthread, NULL, philo_alive, (void *) p);
+//			pthread_detach(p->pthread);
 				start_routine(p);
 				exit(EXIT_SUCCESS);
 			}
+//			ft_usleep(500);
 		}
 		index++;
 	}
@@ -76,22 +74,26 @@ void	start_philos(t_args *args)
 {
 	t_philo	*p;
 	int		index;
+	char	*tmp;
 
 	index = 0;
+	(void)tmp;
 	while (index < args->args[N_PHILO])
 	{
 		p = &args->philos[index];
 		if ((p->pid = fork()) == 0)
 		{
-//			args->forks = sem_open("/forks", O_RDWR);
-//			args->messages = sem_open("/messages", O_RDWR);
-//			args->picking = sem_open("/picking", O_RDWR);
+//			p->args->messages = sem_open("/messages", O_RDWR);
+//			p->args->forks = sem_open("/forks", O_RDWR);
+//			p->args->picking = sem_open("/picking", O_RDWR);
+			p->eat = sem_open((tmp = ft_itoa(p->id)), O_CREAT);
+			free(tmp);
 			pthread_create(&p->pthread, NULL, philo_alive, (void *) p);
 //			pthread_detach(p->pthread);
 			start_routine(p);
 			exit(EXIT_SUCCESS);
 		}
-		usleep(10);
+		usleep(100);
 		index++;
 	}
 }
@@ -114,10 +116,6 @@ int		ft_wait(t_args *args)
 
 int		start_philosophers(t_args *args)
 {
-	// LAST VERSION : BEFORE REMAKE
-//	start_mid_philo(args, 1);
-//	ft_usleep(5000);
-//	start_mid_philo(args, 0);
 	start_philos(args);
 	ft_wait(args);
 	return (EXIT_SUCCESS);
