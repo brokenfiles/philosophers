@@ -33,7 +33,10 @@ int		philo_alive(t_args *args)
 			return (die_message(&philo, FED));
 		if (!philo.fed && philo.state != EATING
 			&& philo.timeout < current_time(*args))
+		{
+			sem_wait(philo.eat);
 			return (die_message(&philo, DIED));
+		}
 		index++;
 	}
 	return (TRUE);

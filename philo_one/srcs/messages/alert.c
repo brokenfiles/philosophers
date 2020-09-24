@@ -20,7 +20,7 @@ void	alert(long int t, t_philo *p)
 	if (p->state != FED)
 	{
 		ft_putstr(" philo #");
-		ft_putnbr(p->id);
+		ft_putnbr(p->id + 1);
 	}
 	if (p->state == EATING)
 		ft_putstr(" is eating\n");
