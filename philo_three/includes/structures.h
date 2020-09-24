@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:40:41 by louis             #+#    #+#             */
-/*   Updated: 2020/09/23 12:14:06 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/24 09:48:11 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,12 @@
 # include <unistd.h>
 # include <sys/time.h>
 # include <semaphore.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-
-#include <stdio.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/wait.h>
+# include <stdio.h>
 
 # define PHILO_STATE int
 # define N_PHILO 0
@@ -58,10 +57,12 @@ typedef struct	s_philo {
 typedef struct	s_args {
 	int				n_args;
 	int				args[6];
+	int				state;
 	t_philo			*philos;
 	struct timeval	t_start;
 	sem_t			*forks;
 	sem_t			*messages;
-	sem_t			*picking;
+	sem_t			*stop;
+	sem_t			*death;
 }				t_args;
 #endif

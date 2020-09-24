@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/23 20:42:06 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/23 20:42:59 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	print_line(long int t, t_philo *p, PHILO_STATE state)
 	if (state != FED)
 	{
 		ft_putstr(" philo #");
-		ft_putnbr(p->id);
+		ft_putnbr(p->id + 1);
 	}
 	if (state == EATING)
 		ft_putstr(" is eating\n");

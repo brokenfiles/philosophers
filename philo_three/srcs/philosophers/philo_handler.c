@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/23 16:27:11 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/24 09:48:11 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int			init_struct(t_args *args)
 {
 	args->args[CURR_PHILO] = args->args[N_PHILO];
+	args->state = 0;
 	gettimeofday(&args->t_start, NULL);
 	return (EXIT_SUCCESS);
 }
@@ -52,12 +53,17 @@ int			init_sem(t_args *args)
 	sem_unlink("/messages");
 	if (!(args->messages = sem_open("/messages", O_CREAT, 0664, 1)))
 		return (EXIT_FAILURE);
-	sem_unlink("/picking");
-	if (!(args->picking = sem_open("/picking", O_CREAT, 0664, 1)))
-		return (EXIT_FAILURE);
 	sem_unlink("/forks");
 	if (!(args->forks = sem_open("/forks", O_CREAT, 0664, args->args[N_PHILO])))
 		return (EXIT_FAILURE);
+	sem_unlink("/stop");
+	if (!(args->stop = sem_open("/stop", O_CREAT, 0664, 1)))
+		return (EXIT_FAILURE);
+	sem_wait(args->stop);
+	sem_unlink("/death");
+	if (!(args->death = sem_open("/death", O_CREAT, 0664, 1)))
+		return (EXIT_FAILURE);
+	sem_wait(args->death);
 	return (EXIT_SUCCESS);
 }
 

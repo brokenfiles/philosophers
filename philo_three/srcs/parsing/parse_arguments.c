@@ -6,14 +6,14 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:04:48 by louis             #+#    #+#             */
-/*   Updated: 2020/09/23 12:14:06 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/23 16:25:47 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/structures.h"
 #include "../../includes/declarations.h"
 
-int	is_str_digit(const char *str)
+int			is_str_digit(const char *str)
 {
 	int	index;
 
@@ -27,7 +27,7 @@ int	is_str_digit(const char *str)
 	return (1);
 }
 
-int	check_arguments(t_args *args)
+int			check_arguments(t_args *args)
 {
 	if (args->args[N_PHILO] < 2)
 		return (EXIT_FAILURE);
@@ -36,7 +36,7 @@ int	check_arguments(t_args *args)
 	return (EXIT_SUCCESS);
 }
 
-int	parse_arguments(t_args *args, int ac, char **av)
+int			parse_arguments(t_args *args, int ac, char **av)
 {
 	int	index;
 	int	tmp;
