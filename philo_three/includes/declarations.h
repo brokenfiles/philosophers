@@ -12,6 +12,11 @@
 
 #ifndef DECLARATIONS_H
 # define DECLARATIONS_H
+# if defined(__unix__) || !defined(__APPLE__) && defined(__MACH__)
+#  define LINUX 1
+# else
+#  define LINUX 0
+# endif
 
 int			ft_error(const char *error_str);
 int			parse_arguments(t_args *args, int ac, char **av);

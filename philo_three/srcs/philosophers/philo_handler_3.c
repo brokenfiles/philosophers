@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
-/*   Updated: 2020/09/24 10:58:57 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 14:31:03 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,23 @@
 
 int		clear_philo(t_args *args)
 {
+	int	index;
+
+	sem_unlink("/forks");
+	sem_unlink("/messages");
+	sem_unlink("/picking");
+	sem_unlink("/stop");
+	sem_unlink("/death");
+	if (LINUX)
+	{
+		index = 0;
+		while (index < args->args[N_PHILO])
+			sem_close(args->philos[index++].eat);
+		sem_close(args->forks);
+		sem_close(args->messages);
+		sem_close(args->stop);
+		sem_close(args->death);
+	}
 	free(args->philos);
 	free(args);
 	return (EXIT_SUCCESS);
