@@ -1,0 +1,28 @@
+0 philo #1 has taken a fork
+0 philo #1 has taken a fork
+0 philo #1 is eating
+0 philo #3 has taken a fork
+100 philo #1 is sleeping
+100 philo #3 has taken a fork
+100 philo #3 is eating
+100 philo #2 has taken a fork
+201 philo #1 is thinking
+201 philo #3 is sleeping
+201 philo #2 has taken a fork
+201 philo #2 is eating
+201 philo #1 has taken a fork
+301 philo #3 is thinking
+301 philo #2 is sleeping
+301 philo #1 has taken a fork
+302 philo #1 is eating
+302 philo #3 has taken a fork
+401 philo #2 is thinking
+402 philo #1 is sleeping
+402 philo #3 has taken a fork
+402 philo #3 is eating
+402 philo #2 has taken a fork
+502 philo #3 is sleeping
+502 philo #2 has taken a fork
+502 philo #2 is eating
+602 philo #2 is sleeping
+602 everyone is fed

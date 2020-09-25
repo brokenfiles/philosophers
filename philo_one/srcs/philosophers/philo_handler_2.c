@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/19 15:28:53 by llaurent         ###   ########.fr       */
+/*   Updated: 2020/09/25 12:15:42 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ int		philo_alive(t_args *args)
 		if (!philo.fed && philo.state != EATING &&
 		philo.timeout < current_time(*args))
 		{
+			pthread_mutex_lock(&philo.eat);
 			die_message(&philo, DIED);
-			pthread_mutex_lock(&args->fork_message);
+			philo.args->stop = 1;
+			pthread_mutex_lock(&args->messages);
 			return (FALSE);
 		}
 		index++;

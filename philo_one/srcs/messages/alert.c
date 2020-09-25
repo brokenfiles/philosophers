@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:41:18 by louis             #+#    #+#             */
-/*   Updated: 2020/09/19 19:35:44 by llaurent         ###   ########.fr       */
+/*   Updated: 2020/09/25 12:29:08 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 void	alert(long int t, t_philo *p)
 {
-	pthread_mutex_lock(&p->args->fork_message);
+	pthread_mutex_lock(&p->args->messages);
+	if (p->args->stop)
+		return ;
 	ft_putnbr((int)t);
 	if (p->state != FED)
 	{
@@ -34,5 +36,5 @@ void	alert(long int t, t_philo *p)
 		ft_putstr(" died\n");
 	else if (p->state == FED)
 		ft_putstr(" everyone is fed\n");
-	pthread_mutex_unlock(&p->args->fork_message);
+	pthread_mutex_unlock(&p->args->messages);
 }

@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/19 15:36:25 by llaurent         ###   ########.fr       */
+/*   Updated: 2020/09/25 12:15:42 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int			init_struct(t_args *args)
 {
+	args->stop = 0;
 	args->args[CURR_PHILO] = args->args[N_PHILO];
 	gettimeofday(&args->t_start, NULL);
 	return (EXIT_SUCCESS);
@@ -59,8 +60,8 @@ int			init_mutex(t_args *args)
 		pthread_mutex_unlock(&args->forks[index].mutex);
 		index++;
 	}
-	pthread_mutex_init(&args->fork_message, NULL);
-	pthread_mutex_unlock(&args->fork_message);
+	pthread_mutex_init(&args->messages, NULL);
+	pthread_mutex_unlock(&args->messages);
 	return (EXIT_SUCCESS);
 }
 

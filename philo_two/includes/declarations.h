@@ -25,6 +25,7 @@ long int	current_time(t_args args);
 void		alert(long int t, t_philo *p);
 int			clear_philo(t_args *args);
 int			ft_free_error(const char *error_str, void *mem);
+char		*ft_itoa(int nbr);
 void		ft_putnbr(int nb);
 void		ft_usleep(long n);
 #endif

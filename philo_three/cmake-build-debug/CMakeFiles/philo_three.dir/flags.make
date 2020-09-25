@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk 
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/louis/42/philos/philo_three/includes 
+C_INCLUDES = -I/Users/louis/42/philosophers_intra/philo_three/includes 
 

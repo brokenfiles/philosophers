@@ -56,9 +56,10 @@ typedef struct	s_philo {
 typedef struct	s_args {
 	int				n_args;
 	int				args[6];
+	int				stop;
 	t_philo			*philos;
 	struct timeval	t_start;
 	t_fork			*forks;
-	pthread_mutex_t	fork_message;
+	pthread_mutex_t	messages;
 }				t_args;
 #endif

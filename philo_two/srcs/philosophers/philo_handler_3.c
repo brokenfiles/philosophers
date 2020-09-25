@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 11:56:05 by louis             #+#    #+#             */
-/*   Updated: 2020/09/24 14:59:36 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 10:53:02 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 
 int		clear_philo(t_args *args)
 {
-	int	index;
-
-	index = 0;
-	while (index < args->args[N_PHILO])
-		free(args->philos[index++].eat);
+	free(args->philos);
 	free(args);
 	return (EXIT_SUCCESS);
 }

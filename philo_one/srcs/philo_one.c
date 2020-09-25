@@ -6,14 +6,33 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 20:36:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/11 17:52:18 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 12:29:08 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/structures.h"
 #include "../includes/declarations.h"
 
-int	main(int ac, char **av)
+void	wait_threads_to_quit(t_args *args)
+{
+	int		index;
+	t_philo	*p;
+
+	while (args->args[CURR_PHILO] > 0)
+	{
+		index = 0;
+		pthread_mutex_unlock(&args->messages);
+		while (index < args->args[N_PHILO])
+		{
+			p = &args->philos[index];
+			pthread_mutex_unlock(&p->eat);
+			pthread_mutex_unlock(&p->args->forks[index].mutex);
+			index++;
+		}
+	}
+}
+
+int		main(int ac, char **av)
 {
 	t_args *args;
 
@@ -26,6 +45,7 @@ int	main(int ac, char **av)
 	if (init_philosophers(args, args->args[N_PHILO]) == EXIT_FAILURE)
 		return (ft_free_error("Cannot init philosophers.\n", args));
 	start_philosophers(args);
+	wait_threads_to_quit(args);
 	clear_philo(args);
 	return (EXIT_SUCCESS);
 }
