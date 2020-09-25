@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 17:37:16 by louis             #+#    #+#             */
-/*   Updated: 2020/09/15 14:30:33 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 12:39:50 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ int		philo_alive(t_args *args)
 			&& philo.timeout < current_time(*args))
 		{
 			sem_wait(philo.eat);
-			return (die_message(&philo, DIED));
+			die_message(&philo, DIED);
+			philo.args->stop = 1;
+			return (FALSE);
 		}
 		index++;
 	}

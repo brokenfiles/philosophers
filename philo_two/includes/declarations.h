@@ -6,12 +6,17 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 16:01:36 by louis             #+#    #+#             */
-/*   Updated: 2020/09/07 20:15:51 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 12:50:47 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DECLARATIONS_H
 # define DECLARATIONS_H
+# if defined(__unix__) || !defined(__APPLE__) && defined(__MACH__)
+#  define LINUX 1
+# else
+#  define LINUX 0
+# endif
 
 int			ft_error(const char *error_str);
 int			parse_arguments(t_args *args, int ac, char **av);

@@ -16,6 +16,8 @@
 void	alert(long int t, t_philo *p)
 {
 	sem_wait(p->args->messages);
+	if (p->args->stop)
+		return ;
 	ft_putnbr((int)t);
 	if (p->state != FED)
 	{

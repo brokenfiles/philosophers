@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 10:27:59 by louis             #+#    #+#             */
-/*   Updated: 2020/09/15 13:05:49 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 12:37:22 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,24 @@ t_philo		*philo_state(t_philo *p, PHILO_STATE state)
 
 void		take_forks(t_philo *p)
 {
+	sem_wait(p->args->picking);
 	sem_wait(p->args->forks);
 	alert(current_time(*p->args), philo_state(p, FORKING));
 	sem_wait(p->args->forks);
 	alert(current_time(*p->args), philo_state(p, FORKING));
+	sem_post(p->args->picking);
+}
+
+int			eat(t_philo *p)
+{
+	sem_wait(p->eat);
+	ft_usleep(p->args->args[T_TO_EAT] * 1000);
+	sem_post(p->args->forks);
+	sem_post(p->args->forks);
+	if (p->args->stop)
+		return (1);
+	sem_post(p->eat);
+	return (0);
 }
 
 void		*start_routine(void *arg)
@@ -34,24 +48,22 @@ void		*start_routine(void *arg)
 	p = (t_philo *)arg;
 	while (1)
 	{
-		sem_wait(p->args->picking);
 		take_forks(p);
-		sem_post(p->args->picking);
 		p->timeout = p->args->args[T_TO_DIE] + current_time(*(p->args));
+		if (p->args->stop)
+			break ;
 		alert(current_time(*p->args), philo_state(p, EATING));
-		sem_wait(p->eat);
-		ft_usleep(p->args->args[T_TO_EAT] * 1000);
-		sem_post(p->eat);
-		sem_post(p->args->forks);
-		sem_post(p->args->forks);
+		if (eat(p))
+			break ;
 		alert(current_time(*p->args), philo_state(p, SLEEPING));
 		if (p->args->n_args > 4 &&
-			++p->eat_count >= p->args->args[PHILO_MAX_EAT])
+			++p->eat_count >= p->args->args[PHILO_MAX_EAT] && (p->fed = 1))
 			break ;
 		ft_usleep(p->args->args[T_TO_SLEEP] * 1000);
+		if (p->args->stop)
+			break ;
 		alert(current_time(*p->args), philo_state(p, THINKING));
 	}
 	p->args->args[CURR_PHILO]--;
-	p->fed = 1;
 	return (NULL);
 }

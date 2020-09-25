@@ -6,7 +6,7 @@
 /*   By: louis <louis@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 13:45:57 by louis             #+#    #+#             */
-/*   Updated: 2020/09/25 10:43:54 by louis            ###   ########.fr       */
+/*   Updated: 2020/09/25 10:47:50 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int			init_struct(t_args *args)
 {
+	args->stop = 0;
 	args->args[CURR_PHILO] = args->args[N_PHILO];
 	gettimeofday(&args->t_start, NULL);
 	return (EXIT_SUCCESS);

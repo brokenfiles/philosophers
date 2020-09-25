@@ -58,6 +58,7 @@ typedef struct	s_philo {
 typedef struct	s_args {
 	int				n_args;
 	int				args[6];
+	int				stop;
 	t_philo			*philos;
 	struct timeval	t_start;
 	sem_t			*forks;
